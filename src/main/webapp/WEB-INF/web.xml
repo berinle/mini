@@ -1,6 +1,11 @@
 <web-app>
 
     <servlet>
+        <servlet-name>mini</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet>
         <servlet-name>foo</servlet-name>
         <servlet-class>com.mini.servlet.FooServlet</servlet-class>
     </servlet>
@@ -16,6 +21,14 @@
         <servlet-name>bar</servlet-name>
         <url-pattern>/servlet/bar</url-pattern>
     </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>mini</servlet-name>
+        <!--url-pattern>*.do</url-pattern-->
+        <url-pattern>/mini/*</url-pattern>
+    </servlet-mapping>
+
+
     <filter>
         <filter-name>auctionSniffer</filter-name>
         <filter-class>com.mini.filter.AuctionSniffer</filter-class>
@@ -23,6 +36,7 @@
 
     <filter-mapping>
         <filter-name>auctionSniffer</filter-name>
-        <url-pattern>/servlet/*</url-pattern>
+        <url-pattern>/mini/*</url-pattern>
     </filter-mapping>
+
 </web-app>

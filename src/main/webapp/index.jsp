@@ -23,8 +23,35 @@
             <td>
                 <input type="submit" value="Go >>"/>
             </td>
-        </tr>
+        </tr>                                               
     </table>
+   </form>
+  
+   <form name="f" action="<%=request.getContextPath()%>/mini/unknown">
+      <table>
+        <tr>
+            <td colspan="2">Spring Integration</td>
+        </tr>
+        <tr>
+            <td><a href="/mini/foo/home">Foo Home</a></td> <br>
+            <td><a href="/mini/bar/home">Bar Home</a></td>
+        </tr>
+
+
+        <tr>
+           <td>Pick auction: </td>
+            <td>
+                <select name="auction_type">
+                    <option value="-1">-Pick auction-</option>
+                    <option value="smr">SMR</option>
+                    <option value="reverse">Reverse</option>
+                </select>
+            </td>
+            <td>
+                <input type="submit" value="Go >>"/>
+            </td> 
+        </tr>
+      </table>
     </form>
   </body>
 </html>

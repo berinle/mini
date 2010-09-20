@@ -31,10 +31,12 @@ public class AuctionSniffer implements Filter {
         if(req.getParameter("auction_type").equals("smr")){
 
             log.debug( " doing smr type auctions ");
-            req.getRequestDispatcher("/servlet/foo").forward(req, res);
+            //req.getRequestDispatcher("/servlet/foo").forward(req, res);
+            req.getRequestDispatcher("/mini/foo/home").forward(req, res);
         } else {
             log.debug(" doing reverse type auctions ");
-            req.getRequestDispatcher("/servlet/bar").forward(req, res);
+            //req.getRequestDispatcher("/servlet/bar").forward(req, res);
+            req.getRequestDispatcher("/mini/bar/home").forward(req, res);
         }
     }
 
