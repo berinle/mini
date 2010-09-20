@@ -1,0 +1,15 @@
+<web-app>
+
+    <servlet>
+        <servlet-name>foo</servlet-name>
+        <servlet-class>com.mini.servlet.FooServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>foo</servlet-name>
+        <url-pattern>/servlet/*</url-pattern>
+    </servlet-mapping>
+    <filter>
+        <filter-name>auctionSniffer</filter-name>
+        <filter-class>com.mini.filter.AuctionSniffer</filter-class>
+    </filter>
+</web-app>

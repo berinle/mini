@@ -1,0 +1,21 @@
+apply plugin: 'war'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+apply plugin: 'jetty'
+
+sourceCompatibility = 1.5
+version = 
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile 'log4j:log4j:1.2.13'
+	providedCompile 'javax.servlet:servlet-api:2.5'	
+}
+
+task init << {
+	sourceSets.all*.java.srcDirs*.each { it.mkdirs() }
+	sourceSets.all*.resources.srcDirs*.each { it.mkdirs() }
+}
