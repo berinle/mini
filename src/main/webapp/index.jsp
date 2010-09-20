@@ -9,12 +9,13 @@
 <html>
   <head><title>Simple jsp page</title></head>
   <body>
-  <form action="<%= request.getContextPath()%>/servlet/foo" method="post">
+  <form action="<%= request.getContextPath()%>/servlet/unknown" method="post">
     <table>
         <tr>
             <td>Pick auction: </td>
             <td>
                 <select name="auction_type">
+                    <option value="-1">-Pick auction-</option>
                     <option value="smr">SMR</option>
                     <option value="reverse">Reverse</option>
                 </select>
