@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: berinle
@@ -8,5 +9,16 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head><title>BAR start page</title></head>
-  <body>Welcome to BAR</body>
+  <body>
+  <table>
+  <c:forEach items="${items}" var="item">
+      <tr>
+          <td><c:out value="${item.name}"/></td>
+          <td>
+              <input type="checkbox" name="bid"/>
+          </td>
+      </tr>
+  </c:forEach>
+  </table>
+  </body>
 </html>    

@@ -12,6 +12,22 @@
 <html>
   <head><title>FOO start page</title></head>
   <body>
-    
+
+  <table>
+  <c:forEach items="${items}" var="item">
+      <tr>
+          <td><c:out value="${item.name}"/></td>
+          <td>
+              <select name="price">
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+              </select>
+          </td>
+      </tr>
+
+  </c:forEach>
+  </table>
   </body>
 </html>    

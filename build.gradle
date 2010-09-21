@@ -15,6 +15,7 @@ dependencies {
   compile 'org.springframework:spring-webmvc:3.0.4.RELEASE'
 	providedCompile 'javax.servlet:servlet-api:2.5'
   providedCompile 'jstl:jstl:1.1.2'
+  providedCompile 'taglibs:standard:1.1.2'
 }
 
 task init << {
