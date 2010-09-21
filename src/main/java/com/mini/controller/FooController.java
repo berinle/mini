@@ -1,11 +1,15 @@
 package com.mini.controller;
 
+import com.mini.domain.Item;
 import com.mini.service.FooService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import java.util.List;
 
 /**
  * Created by IntelliJ IDEA.
@@ -24,8 +28,10 @@ public class FooController implements BaseController {
     private FooService fooService;
 
     @RequestMapping
-    public void home(){
+    public void home(Model model){
         log.debug("home -- foo style");
+        List<Item> items = fooService.getItems();
+        model.addAttribute("items", items);
     }
 
     @RequestMapping(method = RequestMethod.POST)

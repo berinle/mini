@@ -1,7 +1,11 @@
 package com.mini.service.impl;
 
+import com.mini.domain.Item;
 import com.mini.service.BarService;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by IntelliJ IDEA.
@@ -12,4 +16,11 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class BarServiceImpl implements BarService {
+    public List<Item> getItems() {
+        List<Item> items = new ArrayList<Item>();
+        items.add(new Item("chair", 50L));
+        items.add(new Item("table", 100L));
+        items.add(new Item("pen", 10L));
+        return items;  
+    }
 }

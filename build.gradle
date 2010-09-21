@@ -13,7 +13,8 @@ repositories {
 dependencies {
 	compile 'log4j:log4j:1.2.13'
   compile 'org.springframework:spring-webmvc:3.0.4.RELEASE'
-	providedCompile 'javax.servlet:servlet-api:2.5'	
+	providedCompile 'javax.servlet:servlet-api:2.5'
+  providedCompile 'jstl:jstl:1.1.2'
 }
 
 task init << {

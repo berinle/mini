@@ -4,6 +4,7 @@ import com.mini.service.BarService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -23,8 +24,9 @@ public class BarController implements BaseController {
     private BarService barService;
 
     @RequestMapping
-    public void home() {
+    public void home(Model model) {
         log.debug("home -- bar style");
+        model.addAttribute("items", barService.getItems());
     }
 
     @RequestMapping(method= RequestMethod.POST)

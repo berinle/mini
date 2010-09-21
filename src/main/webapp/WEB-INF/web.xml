@@ -24,7 +24,6 @@
 
     <servlet-mapping>
         <servlet-name>mini</servlet-name>
-        <!--url-pattern>*.do</url-pattern-->
         <url-pattern>/mini/*</url-pattern>
     </servlet-mapping>
 

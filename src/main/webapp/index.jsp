@@ -7,8 +7,10 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head><title>Simple jsp page</title></head>
+  <head><title>Proof of Concept</title></head>
   <body>
+
+  <!--
   <form action="<%= request.getContextPath()%>/servlet/unknown" method="post">
     <table>
         <tr>
@@ -26,8 +28,9 @@
         </tr>                                               
     </table>
    </form>
+   -->
   
-   <form name="f" action="<%=request.getContextPath()%>/mini/unknown">
+   <form name="f" action="<%=request.getContextPath()%>/mini/unknown" method="post">
       <table>
         <tr>
             <td colspan="2">Spring Integration</td>
@@ -39,7 +42,7 @@
 
 
         <tr>
-           <td>Pick auction: </td>
+           <td>Pick auction type: </td>
             <td>
                 <select name="auction_type">
                     <option value="-1">-Pick auction-</option>

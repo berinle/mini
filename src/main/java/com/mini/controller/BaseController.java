@@ -1,5 +1,7 @@
 package com.mini.controller;
 
+import org.springframework.ui.Model;
+
 /**
  * Created by IntelliJ IDEA.
  * User: berinle
@@ -9,6 +11,6 @@ package com.mini.controller;
  */
 public interface BaseController {
 
-    void home();
+    void home(Model model);
     void placeBid();
 }
