@@ -16,21 +16,22 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * To change this template use File | Settings | File Templates.
  */
 @Controller
-@RequestMapping(value="/bar/home")
+@RequestMapping(value="/bar")
 public class BarController implements BaseController {
     private static Logger log = Logger.getLogger(BarController.class);
 
     @Autowired
     private BarService barService;
 
-    @RequestMapping
+    @RequestMapping(method=RequestMethod.POST, value="/home")
     public void home(Model model) {
         log.debug("home -- bar style");
         model.addAttribute("items", barService.getItems());
     }
 
-    @RequestMapping(method= RequestMethod.POST)
-    public void placeBid() {
+    @RequestMapping(method= RequestMethod.POST, value="/placeBid")
+    public String placeBid() {
         log.debug(" placing bids -- bar style");
+        return "bar/bid_success";
     }
 }

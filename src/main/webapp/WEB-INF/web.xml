@@ -35,7 +35,7 @@
 
     <filter-mapping>
         <filter-name>auctionSniffer</filter-name>
-        <url-pattern>/mini/*</url-pattern>
+        <url-pattern>/mini/unknown</url-pattern>
     </filter-mapping>
 
 </web-app>

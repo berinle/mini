@@ -2,3 +2,4 @@ mini.*
 build/
 .gradle/
 out/
+gradle-app.setting

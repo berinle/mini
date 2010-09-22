@@ -19,7 +19,7 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 @Controller
-@RequestMapping(value="/foo/home")
+@RequestMapping(value="/foo")
 public class FooController implements BaseController {
 
     private static Logger log = Logger.getLogger(FooController.class);
@@ -27,15 +27,16 @@ public class FooController implements BaseController {
     @Autowired
     private FooService fooService;
 
-    @RequestMapping
+    @RequestMapping(method=RequestMethod.POST, value="/home")
     public void home(Model model){
         log.debug("home -- foo style");
         List<Item> items = fooService.getItems();
         model.addAttribute("items", items);
     }
 
-    @RequestMapping(method = RequestMethod.POST)
-    public void placeBid(){
+    @RequestMapping(method = RequestMethod.POST, value="/placeBid")
+    public String placeBid(){
         log.debug(" placing bid -- foo style ");
+        return "foo/bid_success";
     }
 }

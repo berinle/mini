@@ -12,5 +12,5 @@ import org.springframework.ui.Model;
 public interface BaseController {
 
     void home(Model model);
-    void placeBid();
+    String placeBid();
 }

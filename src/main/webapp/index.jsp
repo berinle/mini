@@ -10,7 +10,7 @@
   <head><title>Proof of Concept</title></head>
   <body>
 
-  <!--
+  <%--
   <form action="<%= request.getContextPath()%>/servlet/unknown" method="post">
     <table>
         <tr>
@@ -28,7 +28,7 @@
         </tr>                                               
     </table>
    </form>
-   -->
+   --%>
   
    <form name="f" action="<%=request.getContextPath()%>/mini/unknown" method="post">
       <table>

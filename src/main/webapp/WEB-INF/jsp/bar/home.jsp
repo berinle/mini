@@ -1,15 +1,12 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: berinle
-  Date: Sep 19, 2010
-  Time: 8:32:23 PM
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head><title>BAR start page</title></head>
   <body>
+
+  <form action="/mini/bar/placeBid" method="post">
   <table>
   <c:forEach items="${items}" var="item">
       <tr>
@@ -19,6 +16,12 @@
           </td>
       </tr>
   </c:forEach>
+      <tr>
+          <td colspan="2">
+            <input type="submit" value="Submit"/>
+          </td>
+      </tr>
   </table>
+  </form>
   </body>
 </html>    
